@@ -88,8 +88,10 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: prod
-```
 
+
+kubectl apply -f namespace.yaml
+```
 ---
 
 ## Best Practices
