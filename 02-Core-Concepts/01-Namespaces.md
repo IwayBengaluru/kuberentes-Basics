@@ -32,7 +32,7 @@ Namespaces are especially useful in:
 
 ---
 
-## Default Namespaces in Kubernetes
+## Default Namespaces Created when Kubernetes enabled
 
 - `default`: The default namespace for objects without a namespace
 - `kube-system`: Used for Kubernetes system components
