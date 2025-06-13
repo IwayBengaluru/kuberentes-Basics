@@ -67,7 +67,18 @@ kind: Namespace
 metadata:
   name: dev
 ```
-
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: qa
+```
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod
+```
 ---
 
 ## Best Practices
