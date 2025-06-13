@@ -50,35 +50,46 @@ kubectl create namespace dev
 # List all namespaces
 kubectl get namespaces
 
+NAME              STATUS   AGE
+default           Active   1d
+kube-node-lease   Active   1d
+kube-public       Active   1d
+kube-system       Active   1d
+
+
 # Run a pod in a specific namespace
 kubectl run nginx --image=nginx -n dev
 
 # Set the current namespace context
 kubectl config set-context --current --namespace=dev
+
+kubectl delete namespace dev
+
+kubectl delete namespace qa prod
 ```
 
 ---
 
 ## YAML Definition Example
 
+namespace.yaml
 ```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
   name: dev
-```
-```yaml
+---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: qa
-```
-```yaml
+---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: prod
 ```
+
 ---
 
 ## Best Practices
